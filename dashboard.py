@@ -31,7 +31,7 @@ hourSum = all_df.groupby("weathersit")["cnt_y"].sum().reset_index()
 
 with col1:
     plt.figure(figsize=(10, 6))
-    plt.bar(["Cerah", "Berawan/Berkabut", "Hujan/Salju Ringan", "Hujan Deras/Salju Lebat"], daySum['cnt_x'], color="b")
+    plt.bar(["Cerah", "Berawan/Berkabut", "Hujan/Salju Ringan", "Hujan Deras/Salju Lebat"], daySum['cnt_x'], color="paleturquoise")
     plt.title("Jumlah Sepeda Disewa (Harian) pada Kondisi Cuaca yang Berbeda")
     plt.xlabel("Kondisi Cuaca")
     plt.ylabel("Jumlah")
@@ -40,7 +40,7 @@ with col1:
 
 with col2:
     plt.figure(figsize=(10, 6))
-    plt.bar(["Cerah", "Berawan/Berkabut", "Hujan/Salju Ringan", "Hujan Deras/Salju Lebat"], hourSum['cnt_y'], color="r")
+    plt.bar(["Cerah", "Berawan/Berkabut", "Hujan/Salju Ringan", "Hujan Deras/Salju Lebat"], hourSum['cnt_y'], color="lightcoral")
     plt.title("Jumlah Sepeda Disewa (Jam) pada Kondisi Cuaca yang Berbeda")
     plt.xlabel("Kondisi Cuaca")
     plt.ylabel("Jumlah")
@@ -60,7 +60,7 @@ hourSum = all_df.groupby("weathersit")["cnt_y"].sum().reset_index()
 
 with col1:
     plt.figure(figsize=(10, 6))
-    plt.bar(["Cerah", "Berawan/Berkabut", "Hujan/Salju Ringan", "Hujan Deras/Salju Lebat"], daySum['cnt_x'], color="b")
+    plt.bar(["Cerah", "Berawan/Berkabut", "Hujan/Salju Ringan", "Hujan Deras/Salju Lebat"], daySum['cnt_x'], color="paleturquoise")
     plt.title("Jumlah Sepeda Disewa (Harian) pada Kondisi Cuaca yang Berbeda (Log)")
     plt.xlabel("Kondisi Cuaca")
     plt.ylabel("Jumlah")
@@ -70,7 +70,7 @@ with col1:
 
 with col2:
     plt.figure(figsize=(10, 6))
-    plt.bar(["Cerah", "Berawan/Berkabut", "Hujan/Salju Ringan", "Hujan Deras/Salju Lebat"], hourSum['cnt_y'], color="r")
+    plt.bar(["Cerah", "Berawan/Berkabut", "Hujan/Salju Ringan", "Hujan Deras/Salju Lebat"], hourSum['cnt_y'], color="lightcoral")
     plt.title("Jumlah Sepeda Disewa (Jam) pada Kondisi Cuaca yang Berbeda (Log)")
     plt.xlabel("Kondisi Cuaca")
     plt.ylabel("Jumlah")
@@ -95,7 +95,7 @@ st.write(
 monthly = all_df.groupby("mnth")["cnt_x"].sum().reset_index()
 
 plt.figure(figsize=(10, 6))
-plt.bar(monthly["mnth"], monthly["cnt_x"], color='g')
+plt.bar(monthly["mnth"], monthly["cnt_x"], color='sandybrown')
 
 plt.xlabel("Bulan")
 plt.ylabel("Jumlah")
