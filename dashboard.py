@@ -47,6 +47,13 @@ with col2:
     plt.tick_params(axis='x', rotation=30)
     st.pyplot(plt)
 
+st.write(
+    """
+    Berikut adalah hasil visualisasi dari geoanalysis berapa banyaknya sepeda disewa pada kondisi cuaca yang berbeda. 
+    **Tetapi, dikarenakan ada bar yang tidak terlihat karena nilainya terlalu kecil**, maka garis y akan diskalakan dengan logaritma agar terlihat.
+    """
+)
+
 col1, col2, = st.columns(2)
 daySum = all_df.groupby("weathersit")["cnt_x"].sum().reset_index()
 hourSum = all_df.groupby("weathersit")["cnt_y"].sum().reset_index()
